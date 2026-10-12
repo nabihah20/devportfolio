@@ -1,2 +1,35 @@
+# System and temporary
 __pycache__/
 *.pyc
+*.py
+
+# Cover letters and local documents
+Cover Letter*
+Motivation Letter*
+Resume Nabihah Taquddin Azmy v1*
+Resume Nabihah Taquddin Azmy v2*
+Resume Nabihah Taquddin Azmy v3*
+Resume Nabihah Taquddin Azmy v4*
+Resume Nabihah Taquddin Azmy v5*
+Resume Nabihah Taquddin Azmy v6 (1-Page)*
+Resume Nabihah Taquddin Azmy v6 (2-Page)*
+Resume Nabihah Taquddin Azmy v6 (Updated).docx
+Resume Nabihah Taquddin Azmy v6.docx
+Resume Nabihah Taquddin Azmy v6.pdf
+Resume (Nabihah Taquddin Azmy)*
+Resume 1.pdf
+Nabihah_Azmy_Application_Specialist_Resume.docx
+MyFutureJobs*
+new_content.docx
+*.docx
+
+# Screenshots and unused images
+bugs*.png
+improve*.png
+1page_p1.png
+page_*.png
+final_*.png
+nabihah.jpg
+nabihah1.jpg
+nabihah2.jpg
+nabihah3.png
