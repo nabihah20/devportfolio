@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nabihah Taquddin Azmy</title>
+  <meta name="description"
+    content="Portfolio of Nabihah Binti Taquddin Azmy - Software Engineer specializing in Embedded Hardware Integration, ESP32-S3 Touchscreen GUIs, BLE Telemetry, Edge AI, and Full-Stack Systems (Node.js, NestJS, MySQL, MongoDB).">
+  <meta name="keywords"
+    content="Software Engineer, Embedded Systems, ESP32-S3, SquareLine Studio, LVGL, TinyML, Edge Impulse, BLE GATT, Node.js, NestJS, Express, MySQL, Penang, Malaysia">
+  <meta name="author" content="Nabihah Binti Taquddin Azmy">
+
+  <!-- Open Graph Meta -->
+  <meta property="og:title" content="Nabihah Binti Taquddin Azmy | Software Engineer">
+  <meta property="og:description"
+    content="Software Engineer & Technical Lead bridging full-stack web platforms with embedded hardware, IoT telemetry, and Edge AI.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="nabihah4.png">
+
+  <!-- Favicon & Touch Icon (Circular Avatar) -->
+  <link rel="icon" type="image/png" href="favicon-round.png">
+  <link rel="apple-touch-icon" href="favicon-round.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="nav-brand" aria-label="Nabihah Portfolio Home">
+        <span class="brand-text">Nabihah Taquddin</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">Overview</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#skills" class="nav-link">Tech Stack</a></li>
+          <li><a href="#credentials" class="nav-link">Credentials</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions (Theme Toggle, Resume Button, Mobile Hamburger) -->
+      <div class="nav-actions">
+        <button id="themeToggle" class="btn-icon" aria-label="Toggle light or dark theme" title="Switch Theme">
+          <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <a href="Resume%20Nabihah%20Taquddin%20Azmy%20v6%20(Updated).pdf" download
+          class="btn btn-sm btn-ghost nav-resume-btn" aria-label="Download Resume PDF">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>Resume PDF</span>
+        </a>
+
+        <button id="btnMobileNav" class="btn-icon btn-mobile-toggle" aria-label="Open mobile navigation menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer & Backdrop -->
+  <div id="mobileNavOverlay" class="mobile-nav-overlay" aria-hidden="true"></div>
+  <aside id="mobileNavDrawer" class="mobile-nav-drawer" aria-label="Mobile Menu" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="nav-brand">
+        <span class="brand-text">Nabihah Taquddin</span>
+      </div>
+      <button id="btnCloseMobileNav" class="btn-icon" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="drawer-nav">
+      <ul class="drawer-menu">
+        <li><a href="#home" class="mobile-nav-link"><span>01</span> Home</a></li>
+        <li><a href="#about" class="mobile-nav-link"><span>02</span> Overview</a></li>
+        <li><a href="#experience" class="mobile-nav-link"><span>03</span> Experience</a></li>
+        <li><a href="#projects" class="mobile-nav-link"><span>04</span> Projects</a></li>
+        <li><a href="#skills" class="mobile-nav-link"><span>05</span> Tech Stack</a></li>
+        <li><a href="#credentials" class="mobile-nav-link"><span>06</span> Credentials</a></li>
+        <li><a href="#contact" class="mobile-nav-link"><span>07</span> Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="drawer-footer">
+      <a href="Resume%20Nabihah%20Taquddin%20Azmy%20v6%20(Updated).pdf" download class="btn btn-primary btn-block">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Download Resume (PDF)
+      </a>
+      <div class="drawer-contact-quick">
+        <p>Seberang Jaya, Penang, Malaysia</p>
+        <a href="mailto:nabihahtaqudin@gmail.com">nabihahtaqudin@gmail.com</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content Container -->
+  <main id="mainContent">
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="container">
+
+        <div class="hero-grid">
+
+          <!-- Hero Card: Profile Bio -->
+          <article class="hero-card hero-bio-card">
+            <div class="hero-badge-row">
+              <span class="location-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Seberang Jaya, Penang
+              </span>
+            </div>
+
+            <div class="hero-header-flex">
+              <div class="avatar-wrap">
+                <img src="nabihah4.png" alt="Nabihah Binti Taquddin Azmy" class="avatar-img" width="110" height="110">
+                <div class="avatar-ring"></div>
+              </div>
+
+              <div class="hero-name-col">
+                <h1 class="hero-name">Nabihah Binti Taquddin Azmy</h1>
+                <p class="hero-tagline">Software Engineer | Embedded &amp; Full-Stack Systems</p>
+              </div>
+            </div>
+
+            <p class="hero-summary">
+              Skilled Software Engineer and Technical Lead with <strong>over 5 years</strong> of professional experience
+              building full-stack web applications, relational database infrastructure, and leading software platform
+              delivery. Combines a solid software engineering foundation (<em>Node.js, Express, NestJS, RESTful APIs,
+                MySQL, MongoDB</em>) with hands-on embedded hardware integration (<em>ESP32-S3 microcontrollers,
+                Touchscreen GUIs with SquareLine Studio, BLE telemetry, Edge AI</em>).
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn btn-primary">
+                <span>Explore Applied Work</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+              <a href="#contact" class="btn btn-ghost">
+                <span>Contact Me</span>
+              </a>
+              <button class="btn btn-ghost copy-email-btn" data-copy="nabihahtaqudin@gmail.com"
+                title="Copy email address" aria-label="Copy email">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>Copy Email</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Hero Card: Architecture & Engineering Radar -->
+          <article class="hero-card hero-radar-card">
+            <div class="radar-header">
+              <span class="radar-title">Engineering Focus &amp; Core Systems</span>
+              <span class="radar-tag"><span class="radar-dot"></span> Active Systems</span>
+            </div>
+
+            <p class="radar-subtitle">
+              Orchestrating end-to-end solutions from resource-constrained edge silicon to enterprise cloud web
+              services:
+            </p>
+
+            <div class="radar-chips-grid">
+              <div class="radar-chip highlight">
+                <span class="chip-icon">🖥️</span>
+                <div class="chip-content">
+                  <strong>SquareLine Studio &amp; LVGL</strong>
+                  <span>AMOLED Touchscreen UI Architecture</span>
+                </div>
+              </div>
+
+              <div class="radar-chip highlight">
+                <span class="chip-icon">⚡</span>
+                <div class="chip-content">
+                  <strong>ESP32-S3 &amp; ESP-IDF (C/C++)</strong>
+                  <span>FreeRTOS Dual-Core Firmware Kernel</span>
+                </div>
+              </div>
+
+              <div class="radar-chip">
+                <span class="chip-icon">📡</span>
+                <div class="chip-content">
+                  <strong>BLE Custom GATT Telemetry</strong>
+                  <span>Sensor Data Streaming &amp; Telemetry</span>
+                </div>
+              </div>
+
+              <div class="radar-chip">
+                <span class="chip-icon">🧠</span>
+                <div class="chip-content">
+                  <strong>Edge AI &amp; Edge Impulse</strong>
+                  <span>Acoustic Classification &amp; Signal DSP</span>
+                </div>
+              </div>
+
+              <div class="radar-chip">
+                <span class="chip-icon">🌐</span>
+                <div class="chip-content">
+                  <strong>Node.js &amp; NestJS Backends</strong>
+                  <span>RESTful APIs &amp; Enterprise Services</span>
+                </div>
+              </div>
+
+              <div class="radar-chip">
+                <span class="chip-icon">🤖</span>
+                <div class="chip-content">
+                  <strong>AI Tooling &amp; Antigravity</strong>
+                  <span>Workflow Acceleration &amp; Rapid Prototyping</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Live Hardware Specs -->
+            <div class="telemetry-box">
+              <div class="telemetry-item">
+                <span class="telem-label">Hardware Target</span>
+                <span class="telem-val">ESP32-S3 AMOLED / Arduino</span>
+              </div>
+              <div class="telemetry-item">
+                <span class="telem-label">Enterprise Platform</span>
+                <span class="telem-val">14 Modules (MECHIS 24/7)</span>
+              </div>
+              <div class="telemetry-item">
+                <span class="telem-label">Database Engines</span>
+                <span class="telem-val">MySQL &amp; MongoDB Relational</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Overview / About Section -->
+    <section id="about" class="section section-alt">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Core Foundation</span>
+          <h2 class="section-title">Technical Leadership &amp; Engineering Philosophy</h2>
+          <p class="section-subtitle">A balanced fusion of robust backend engineering, structured SDLC management, and
+            low-level microcontroller capabilities.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <div class="about-icon-wrap icon-cyan">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3>Enterprise Platform Leadership</h3>
+            <p>Experienced lead Person-in-Charge (PIC) managing 14-module enterprise systems (MECHIS), proactively
+              monitoring operational uptime, coordinating multi-gigabyte database expansions, and enforcing strict
+              service-level agreements (SLAs).</p>
+          </div>
+
+          <div class="about-card">
+            <div class="about-icon-wrap icon-blue">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                <rect x="9" y="9" width="6" height="6"></rect>
+                <line x1="9" y1="1" x2="9" y2="4"></line>
+                <line x1="15" y1="1" x2="15" y2="4"></line>
+                <line x1="9" y1="20" x2="9" y2="23"></line>
+                <line x1="15" y1="20" x2="15" y2="23"></line>
+                <line x1="20" y1="9" x2="23" y2="9"></line>
+                <line x1="20" y1="14" x2="23" y2="14"></line>
+                <line x1="1" y1="9" x2="4" y2="9"></line>
+                <line x1="1" y1="14" x2="4" y2="14"></line>
+              </svg>
+            </div>
+            <h3>Embedded Hardware &amp; Touch UI</h3>
+            <p>Architecting smooth, low-latency GUI interfaces on ESP32-S3 AMOLED touchscreens using SquareLine Studio
+              and LVGL. Pairing microcontrollers over BLE GATT custom protocols and processing multi-sensor telemetry.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <div class="about-icon-wrap icon-purple">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <h3>End-to-End SDLC Governance</h3>
+            <p>Directing full software lifecycles: authoring comprehensive Functional Specification Documents (FSDs),
+              assessing Change Requests (CRs), designing UAT scripts, and conducting client onboarding workshops for
+              enterprise software rollouts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Experience Section (Interactive Tabs) -->
+    <section id="experience" class="section">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="section-kicker">Career Path</span>
+          <h2 class="section-title">Professional Experience</h2>
+          <p class="section-subtitle">Documented track record across enterprise software delivery, embedded engineering,
+            and public sector solutions.</p>
+        </div>
+
+        <!-- Interactive Role Switcher Tabs & Mobile Dropdown -->
+        <div class="tabs-container">
+
+          <!-- Mobile Dropdown Selector (visible on mobile screens <= 768px) -->
+          <div class="tabs-select-wrap">
+            <label for="expSelect" class="tabs-select-label">Select Company / Experience:</label>
+            <div class="select-box-custom">
+              <span class="select-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </span>
+              <select id="expSelect" class="tabs-select" aria-label="Select Professional Experience">
+                <option value="exp-ingenious">Ingenious Technology Solutions (2022 – Present)</option>
+                <option value="exp-airei">Airei Sdn. Bhd. (2020 – 2022)</option>
+                <option value="exp-mbi">Majlis Bandaraya Ipoh (2019 - Intern)</option>
+              </select>
+              <span class="select-chevron" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </div>
+          </div>
+
+          <!-- Desktop Tabs Navigation (visible > 768px) -->
+          <div class="tabs-nav" role="tablist" aria-label="Experience Roles">
+            <button class="tab-btn active" data-tab="exp-ingenious" role="tab" aria-selected="true"
+              aria-controls="exp-ingenious">
+              <span class="tab-indicator"></span>
+              <span class="tab-label">Ingenious Technology Solutions</span>
+              <span class="tab-badge">2022 – Present</span>
+            </button>
+
+            <button class="tab-btn" data-tab="exp-airei" role="tab" aria-selected="false" aria-controls="exp-airei">
+              <span class="tab-indicator"></span>
+              <span class="tab-label">Airei Sdn. Bhd.</span>
+              <span class="tab-badge">2020 – 2022</span>
+            </button>
+
+            <button class="tab-btn" data-tab="exp-mbi" role="tab" aria-selected="false" aria-controls="exp-mbi">
+              <span class="tab-indicator"></span>
+              <span class="tab-label">Majlis Bandaraya Ipoh</span>
+              <span class="tab-badge">2019 (Intern)</span>
+            </button>
+          </div>
+
+          <!-- Tab Content Panels -->
+          <div class="tabs-content">
+
+            <!-- Panel 1: Ingenious Technology Solutions -->
+            <div id="exp-ingenious" class="tab-panel active" role="tabpanel">
+              <div class="exp-card">
+                <div class="exp-card-header">
+                  <div>
+                    <h3 class="role-title">Assistant Project Manager cum Software Engineer</h3>
+                    <div class="company-row">
+                      <span class="company-name">Ingenious Technology Solutions Sdn. Bhd.</span>
+                      <span class="company-dot">&bull;</span>
+                      <span class="company-loc">Seberang Jaya, Penang</span>
+                    </div>
+                  </div>
+                  <span class="duration-pill">Dec 2022 – Present &bull; Full-Time</span>
+                </div>
+
+                <p class="exp-intro">
+                  Serving as primary technical Person-in-Charge (PIC) across enterprise application infrastructure and
+                  spearheading embedded IoT / Edge AI device initiatives.
+                </p>
+
+                <div class="bullet-grid">
+
+                  <div class="bullet-item">
+                    <div class="bullet-badge">Enterprise Infrastructure</div>
+                    <h4>Enterprise Platform Leadership (MECHIS)</h4>
+                    <p>Primary technical PIC for 14-module enterprise platform (MECHIS), proactively monitoring system
+                      health and coordinating database capacity expansions to safeguard continuous 24/7 uptime.</p>
+                  </div>
+
+                  <div class="bullet-item">
+                    <div class="bullet-badge">Embedded UI</div>
+                    <h4>Embedded Touchscreen GUI &amp; Hardware Integration</h4>
+                    <p>Designed an Embedded Touchscreen GUI for an ESP32-S3 AMOLED display using SquareLine Studio (LVGL
+                      framework), integrating touch interface components with underlying firmware logic and sensor
+                      pipelines.</p>
+                  </div>
+
+                  <div class="bullet-item">
+                    <div class="bullet-badge">Wireless IoT</div>
+                    <h4>Hardware-Software IoT Data Pipelines</h4>
+                    <p>Developed end-to-end telemetry workflows pairing edge microcontrollers (ESP32 / Arduino) with
+                      software interfaces via Bluetooth Low Energy (BLE), enabling real-time sensor data streaming and
+                      monitoring.</p>
+                  </div>
+
+                  <div class="bullet-item">
+                    <div class="bullet-badge">TinyML / Edge AI</div>
+                    <h4>Embedded AI &amp; Edge Application</h4>
+                    <p>Applied Edge AI models (Edge Impulse) for acoustic and signal classification, evaluating
+                      performance, signal processing, and low-power hardware integration.</p>
+                  </div>
+
+                  <div class="bullet-item">
+                    <div class="bullet-badge">Full-Stack</div>
+                    <h4>Internal Tooling &amp; System Automation</h4>
+                    <p>Architected and deployed a production-ready, role-based Ticketing Support System
+                      (Node.js/Express, MySQL) to automate incident management workflows and enforce SLA resolution
+                      timelines.</p>
+                  </div>
+
+                  <div class="bullet-item">
+                    <div class="bullet-badge">Python &amp; Tooling</div>
+                    <h4>Python Data Diagnostics &amp; AI Orchestration</h4>
+                    <p>Utilized Python scripts and AI-assisted developer workflows for serial telemetry logging, signal
+                      data analysis, and rapid system integration testing.</p>
+                  </div>
+
+                  <div class="bullet-item full-width">
+                    <div class="bullet-badge">SDLC Management</div>
+                    <h4>SDLC Governance &amp; Requirement Analysis</h4>
+                    <p>Authored Functional Specification Documentation (FSD), evaluated Change Requests (CRs), and
+                      directed UAT cycles and client onboarding to maintain system stability and user adoption.</p>
+                  </div>
+
+                </div>
+
+                <div class="tech-tag-row">
+                  <span class="tech-tag">ESP32-S3</span>
+                  <span class="tech-tag">SquareLine Studio</span>
+                  <span class="tech-tag">LVGL</span>
+                  <span class="tech-tag">BLE GATT</span>
+                  <span class="tech-tag">Edge Impulse</span>
+                  <span class="tech-tag">Node.js</span>
+                  <span class="tech-tag">Express.js</span>
+                  <span class="tech-tag">MySQL</span>
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">FSD &amp; UAT</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 2: Airei Sdn. Bhd. -->
+            <div id="exp-airei" class="tab-panel" role="tabpanel">
+              <div class="exp-card">
+                <div class="exp-card-header">
+                  <div>
+                    <h3 class="role-title">Software Engineer</h3>
+                    <div class="company-row">
+                      <span class="company-name">Airei Sdn. Bhd.</span>
+                      <span class="company-dot">&bull;</span>
+                      <span class="company-loc">Cyberjaya, Selangor</span>
+                    </div>
+                  </div>
+                  <span class="duration-pill">Apr 2020 – Nov 2022 &bull; Full-Time</span>
+                </div>
+
+                <p class="exp-intro">
+                  Delivered web application development, client SLA maintenance, and quality assurance for enterprise
+                  clients.
+                </p>
+
+                <div class="bullet-grid">
+                  <div class="bullet-item">
+                    <div class="bullet-badge">Development</div>
+                    <h4>Application Development &amp; Support</h4>
+                    <p>Executed full SDLC development for web applications using PHP (CodeIgniter) and JavaScript,
+                      adhering to strict client SLAs and system specifications.</p>
+                  </div>
+
+                  <div class="bullet-item">
+                    <div class="bullet-badge">Quality Assurance</div>
+                    <h4>Quality Assurance &amp; Documentation</h4>
+                    <p>Conducted functional testing, authored technical end-user documentation, and supported production
+                      release deployments.</p>
+                  </div>
+
+                  <div class="bullet-item full-width">
+                    <div class="bullet-badge">SLA Support</div>
+                    <h4>Client SLA &amp; Incident Management</h4>
+                    <p>Managed Level 1 and Level 2 application support, troubleshooting software incidents and tracking
+                      resolution timelines to ensure strict adherence to service-level agreements.</p>
+                  </div>
+                </div>
+
+                <div class="tech-tag-row">
+                  <span class="tech-tag">PHP (CodeIgniter)</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">MySQL</span>
+                  <span class="tech-tag">RESTful APIs</span>
+                  <span class="tech-tag">SLA Management</span>
+                  <span class="tech-tag">L1/L2 Support</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 3: Majlis Bandaraya Ipoh -->
+            <div id="exp-mbi" class="tab-panel" role="tabpanel">
+              <div class="exp-card">
+                <div class="exp-card-header">
+                  <div>
+                    <h3 class="role-title">Software Developer Intern</h3>
+                    <div class="company-row">
+                      <span class="company-name">Majlis Bandaraya Ipoh</span>
+                      <span class="company-dot">&bull;</span>
+                      <span class="company-loc">Ipoh, Perak</span>
+                    </div>
+                  </div>
+                  <span class="duration-pill">Feb 2019 – Jul 2019 &bull; Internship</span>
+                </div>
+
+                <p class="exp-intro">
+                  Supported public sector e-government initiatives through internal workflow digitalization.
+                </p>
+
+                <div class="bullet-grid">
+                  <div class="bullet-item full-width">
+                    <div class="bullet-badge">Municipal Platform</div>
+                    <h4>Web Platform Development (eJadual)</h4>
+                    <p>Designed and built a web-based meeting scheduling platform (<strong>eJadual</strong>) using
+                      JavaScript, AJAX, and relational databases to automate municipal scheduling workflows and upgrade
+                      municipal portals.</p>
+                  </div>
+                </div>
+
+                <div class="tech-tag-row">
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">AJAX</span>
+                  <span class="tech-tag">PHP</span>
+                  <span class="tech-tag">MySQL</span>
+                  <span class="tech-tag">e-Government</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Applied Engineering Projects -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="section-kicker">Portfolio Highlights</span>
+          <h2 class="section-title">Featured Applied Projects</h2>
+          <p class="section-subtitle">Real-world systems combining embedded microcontrollers, custom touch GUIs, Edge
+            AI, and enterprise web architecture.</p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Project 1: Embedded Touchscreen GUI & IoT BLE AMOLED -->
+          <article class="project-card featured-project">
+            <div class="project-header">
+              <div class="project-category">
+                <span class="cat-pill">Embedded Touch UI</span>
+                <span class="cat-pill">Wireless IoT</span>
+              </div>
+              <span class="project-status">● Live Hardware</span>
+            </div>
+
+            <h3 class="project-title">Embedded Touchscreen GUI &amp; IoT BLE AMOLED Display System</h3>
+
+            <p class="project-desc">
+              Engineered an interactive Touchscreen GUI on an <strong>ESP32-S3 AMOLED display</strong> using
+              <strong>SquareLine Studio</strong> and the <strong>LVGL graphics framework</strong>. Connected with dual
+              edge nodes over custom Bluetooth Low Energy (BLE GATT) services, processing real-time telemetry with zero
+              UI frame lag.
+            </p>
+
+            <div class="project-specs-grid">
+              <div class="spec-box">
+                <span class="spec-label">Touch GUI Stack</span>
+                <span class="spec-val">SquareLine Studio &amp; LVGL</span>
+              </div>
+              <div class="spec-box">
+                <span class="spec-label">Target Hardware</span>
+                <span class="spec-val">ESP32-S3 1.75" Touch-AMOLED</span>
+              </div>
+              <div class="spec-box">
+                <span class="spec-label">Wireless Protocol</span>
+                <span class="spec-val">BLE Custom GATT Services</span>
+              </div>
+              <div class="spec-box">
+                <span class="spec-label">Firmware Kernel</span>
+                <span class="spec-val">FreeRTOS Dual-Core (ESP-IDF)</span>
+              </div>
+            </div>
+
+            <div class="project-tags">
+              <span>SquareLine Studio</span>
+              <span>LVGL</span>
+              <span>ESP32-S3</span>
+              <span>ESP-IDF</span>
+              <span>BLE GATT</span>
+              <span>C/C++</span>
+              <span>FreeRTOS</span>
+            </div>
+          </article>
+
+          <!-- Project 2: TinyML Raindrop Detection -->
+          <article class="project-card">
+            <div class="project-header">
+              <div class="project-category">
+                <span class="cat-pill">TinyML &middot; Edge AI</span>
+              </div>
+              <span class="project-status accent-green">● 100% Accuracy</span>
+            </div>
+
+            <h3 class="project-title">TinyML Acoustic Signal Classifier (Edge Impulse)</h3>
+
+            <p class="project-desc">
+              Built an intelligent acoustic event classifier running 1D-CNN inference directly on resource-constrained
+              microcontrollers. Distinguishes physical impact acoustics against background ambient noise using MFE/MFCC
+              feature extraction with 100% validation accuracy and 0.01 loss.
+            </p>
+
+            <div class="project-specs-grid">
+              <div class="spec-box">
+                <span class="spec-label">Model Precision</span>
+                <span class="spec-val">int8 Quantization (TFLite)</span>
+              </div>
+              <div class="spec-box">
+                <span class="spec-label">Resource Usage</span>
+                <span class="spec-val">11.4 KB RAM / 46.5 KB Flash</span>
+              </div>
+            </div>
+
+            <div class="project-tags">
+              <span>Edge Impulse</span>
+              <span>TFLite Micro</span>
+              <span>1D-CNN</span>
+              <span>int8 Quantization</span>
+              <span>MFCC DSP</span>
+            </div>
+          </article>
+
+          <!-- Project 3: Internal Ticketing Support System -->
+          <article class="project-card">
+            <div class="project-header">
+              <div class="project-category">
+                <span class="cat-pill">Full-Stack Enterprise</span>
+              </div>
+              <span class="project-status">● Production Deployed</span>
+            </div>
+
+            <h3 class="project-title">Enterprise Ticketing Support System &amp; SLA Engine</h3>
+
+            <p class="project-desc">
+              Architected and deployed an internal enterprise incident management system. Engineered with
+              Node.js/Express and MySQL, featuring Role-Based Access Control (RBAC), automated SMTP notifications, and
+              standardized incident resolution timelines adhering to SLAs.
+            </p>
+
+            <div class="project-specs-grid">
+              <div class="spec-box">
+                <span class="spec-label">Backend Engine</span>
+                <span class="spec-val">Node.js, Express.js, REST</span>
+              </div>
+              <div class="spec-box">
+                <span class="spec-label">Database &amp; Auth</span>
+                <span class="spec-val">MySQL Relational, RBAC</span>
+              </div>
+            </div>
+
+            <div class="project-tags">
+              <span>Node.js</span>
+              <span>Express.js</span>
+              <span>MySQL</span>
+              <span>RBAC</span>
+              <span>SMTP Automation</span>
+              <span>RESTful APIs</span>
+            </div>
+          </article>
+
+          <!-- Project 4: Python Audio DSP & Diagnostics Pipeline -->
+          <article class="project-card">
+            <div class="project-header">
+              <div class="project-category">
+                <span class="cat-pill">Python DSP &amp; Tooling</span>
+              </div>
+              <span class="project-status">● Real-Time Stream</span>
+            </div>
+
+            <h3 class="project-title">Python Real-Time Audio DSP &amp; Serial Telemetry Pipeline</h3>
+
+            <p class="project-desc">
+              Built desktop diagnostic software for live 16kHz PCM audio streaming, raw signal clipping analysis, and
+              MEMS microphone gain calibration. Leverages <code>sounddevice</code>, <code>numpy</code>,
+              <code>pyserial</code>, and <code>bleak</code> for hardware telemetry logging.
+            </p>
+
+            <div class="project-specs-grid">
+              <div class="spec-box">
+                <span class="spec-label">Audio Sampling</span>
+                <span class="spec-val">16 kHz / 16-bit Mono PCM</span>
+              </div>
+              <div class="spec-box">
+                <span class="spec-label">Telemetry Stack</span>
+                <span class="spec-val">pyserial, bleak, numpy</span>
+              </div>
+            </div>
+
+            <div class="project-tags">
+              <span>Python</span>
+              <span>NumPy</span>
+              <span>sounddevice</span>
+              <span>pyserial</span>
+              <span>bleak</span>
+              <span>Digital Signal Processing</span>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Core Competencies & Tech Stack (The 5 Pillars) -->
+    <section id="skills" class="section">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="section-kicker">Capabilities</span>
+          <h2 class="section-title">Core Competencies &amp; Tech Stack</h2>
+          <p class="section-subtitle">Structured across 5 fundamental pillars of modern software, embedded hardware, and
+            AI development.</p>
+        </div>
+
+        <div class="pillars-grid">
+
+          <!-- Pillar 1 -->
+          <div class="pillar-card">
+            <div class="pillar-header">
+              <div class="pillar-num">01</div>
+              <div>
+                <h3 class="pillar-title">System Architecture &amp; Integration</h3>
+                <span class="pillar-subtitle">High-Level Design &amp; SDLC</span>
+              </div>
+            </div>
+            <div class="skill-chips">
+              <span class="pill-chip">End-to-End System Design</span>
+              <span class="pill-chip">Hardware-Software Integration</span>
+              <span class="pill-chip">Embedded Touchscreen GUI Architecture</span>
+              <span class="pill-chip">RESTful API Design</span>
+              <span class="pill-chip">System Process Mapping</span>
+              <span class="pill-chip">FSD Authoring</span>
+              <span class="pill-chip">Technical Documentation</span>
+              <span class="pill-chip">UAT Directing</span>
+            </div>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="pillar-card">
+            <div class="pillar-header">
+              <div class="pillar-num">02</div>
+              <div>
+                <h3 class="pillar-title">IDEs, Embedded UI &amp; Hardware Frameworks</h3>
+                <span class="pillar-subtitle">Edge Silicon &amp; Touch Systems</span>
+              </div>
+            </div>
+            <div class="skill-chips">
+              <span class="pill-chip">ESP-IDF (C/C++)</span>
+              <span class="pill-chip">Arduino IDE</span>
+              <span class="pill-chip">SquareLine Studio</span>
+              <span class="pill-chip">LVGL Framework</span>
+              <span class="pill-chip">ESP32-S3 Microcontroller</span>
+              <span class="pill-chip">Arduino Microcontrollers</span>
+              <span class="pill-chip">BLE Telemetry &amp; Protocols</span>
+              <span class="pill-chip">Sensor Data Acquisition</span>
+              <span class="pill-chip">Edge Impulse Studio</span>
+            </div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="pillar-card">
+            <div class="pillar-header">
+              <div class="pillar-num">03</div>
+              <div>
+                <h3 class="pillar-title">Backend &amp; Software Development</h3>
+                <span class="pillar-subtitle">Server-Side &amp; Application Logic</span>
+              </div>
+            </div>
+            <div class="skill-chips">
+              <span class="pill-chip">Node.js</span>
+              <span class="pill-chip">NestJS</span>
+              <span class="pill-chip">Express.js</span>
+              <span class="pill-chip">JavaScript</span>
+              <span class="pill-chip">Python</span>
+              <span class="pill-chip">C / C++</span>
+              <span class="pill-chip">PHP (CodeIgniter / Laravel)</span>
+              <span class="pill-chip">RESTful Web Services</span>
+            </div>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="pillar-card">
+            <div class="pillar-header">
+              <div class="pillar-num">04</div>
+              <div>
+                <h3 class="pillar-title">AI Tooling &amp; Developer Productivity</h3>
+                <span class="pillar-subtitle">Modern Accelerated Engineering</span>
+              </div>
+            </div>
+            <div class="skill-chips">
+              <span class="pill-chip">ChatGPT</span>
+              <span class="pill-chip">Gemini</span>
+              <span class="pill-chip">Antigravity</span>
+              <span class="pill-chip">AI-Assisted Code Generation</span>
+              <span class="pill-chip">Rapid Prototyping</span>
+              <span class="pill-chip">Workflow Acceleration</span>
+              <span class="pill-chip">Diagnostic Scripting</span>
+            </div>
+          </div>
+
+          <!-- Pillar 5 -->
+          <div class="pillar-card">
+            <div class="pillar-header">
+              <div class="pillar-num">05</div>
+              <div>
+                <h3 class="pillar-title">Databases &amp; DevOps Tools</h3>
+                <span class="pillar-subtitle">Data Storage &amp; Deployment</span>
+              </div>
+            </div>
+            <div class="skill-chips">
+              <span class="pill-chip">MySQL</span>
+              <span class="pill-chip">MongoDB</span>
+              <span class="pill-chip">Relational Database Design</span>
+              <span class="pill-chip">AWS S3</span>
+              <span class="pill-chip">Postman</span>
+              <span class="pill-chip">Git / GitLab</span>
+              <span class="pill-chip">VS Code</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section id="credentials" class="section section-alt">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="section-kicker">Qualifications</span>
+          <h2 class="section-title">Education &amp; Certifications</h2>
+          <p class="section-subtitle">Academic foundations in Software Engineering and continuous specialized
+            certifications.</p>
+        </div>
+
+        <div class="creds-grid">
+
+          <!-- Education Card -->
+          <article class="cred-card edu-card">
+            <div class="cred-header">
+              <span class="cred-category">Formal Degree</span>
+              <span class="cred-year">2015 – 2020</span>
+            </div>
+
+            <h3 class="cred-title">Bachelor’s Degree in Software Engineering</h3>
+            <p class="cred-issuer">Universiti Putra Malaysia (UPM)</p>
+
+            <div class="fyp-box">
+              <span class="fyp-tag">Final Year Project</span>
+              <p>Two-Factor Authentication (2FA) Security Implementation for Internal Document Management Systems
+                (Laravel / REST API).</p>
+            </div>
+          </article>
+
+          <!-- Certification 1 -->
+          <article class="cred-card">
+            <div class="cred-header">
+              <span class="cred-category cert-tag">Verified Certificate</span>
+              <span class="cred-year">Aug 2026</span>
+            </div>
+            <h3 class="cred-title">Edge AI Fundamentals</h3>
+            <p class="cred-issuer">Edge Impulse</p>
+            <p class="cred-desc">
+              Applied study in Edge AI architecture, signal processing, and deploying machine learning models on
+              resource-constrained microcontrollers.
+            </p>
+          </article>
+
+          <!-- Certification 2 -->
+          <article class="cred-card">
+            <div class="cred-header">
+              <span class="cred-category cert-tag">Verified Certificate</span>
+              <span class="cred-year">Jan 2026</span>
+            </div>
+            <h3 class="cred-title">NestJS Enterprise Application &amp; REST API Architecture</h3>
+            <p class="cred-issuer">CodeSignal</p>
+            <p class="cred-desc">
+              Structured backend application architecture, dependency injection, REST API development, and MongoDB
+              integration.
+            </p>
+          </article>
+
+          <!-- Certification 3 -->
+          <article class="cred-card">
+            <div class="cred-header">
+              <span class="cred-category cert-tag">Verified Certificate</span>
+              <span class="cred-year">Oct 2025</span>
+            </div>
+            <h3 class="cred-title">Backend Development with Node.js &amp; Express.js</h3>
+            <p class="cred-issuer">Codefinity</p>
+            <p class="cred-desc">
+              Server-side application logic, asynchronous routing, and database integrations.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact & Connect Section -->
+    <section id="contact" class="section">
+      <div class="container">
+
+        <div class="contact-box">
+          <div class="contact-header-text">
+            <span class="section-kicker">Get in Touch</span>
+            <h2 class="contact-title">Let's Build Something Exceptional</h2>
+            <p class="contact-subtitle">
+              Open to opportunities in embedded systems engineering, IoT telemetry platforms, firmware development, or
+              full-stack software leadership.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+
+            <!-- Email Item -->
+            <a href="mailto:nabihahtaqudin@gmail.com" class="contact-item" title="Send Email: nabihahtaqudin@gmail.com">
+              <div class="contact-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="contact-info">
+                <span class="contact-label">Direct Email</span>
+                <span class="contact-val">nabihahtaqudin@gmail.com</span>
+              </div>
+            </a>
+
+            <!-- LinkedIn Item -->
+            <a href="https://linkedin.com/in/nabihah-taquddin-azmy" target="_blank" rel="noopener noreferrer"
+              class="contact-item" title="Open LinkedIn Profile">
+              <div class="contact-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </div>
+              <div class="contact-info">
+                <span class="contact-label">Professional Profile</span>
+                <span class="contact-val">linkedin.com/in/nabihah-taquddin-azmy</span>
+              </div>
+            </a>
+
+            <!-- Phone Item -->
+            <a href="tel:+60135198421" class="contact-item" title="Call +60 13-519 8421">
+              <div class="contact-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+              </div>
+              <div class="contact-info">
+                <span class="contact-label">Mobile Phone</span>
+                <span class="contact-val">+60 13-519 8421</span>
+              </div>
+            </a>
+
+            <!-- Download PDF Item -->
+            <a href="Resume%20Nabihah%20Taquddin%20Azmy%20v6%20(Updated).pdf" download
+              class="contact-item contact-highlight" title="Download Resume PDF (v6 Updated)">
+              <div class="contact-icon-box highlight-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </div>
+              <div class="contact-info">
+                <span class="contact-label">Updated Resume</span>
+                <span class="contact-val">Download PDF (v6 Updated)</span>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span class="footer-copy">&copy; 2026 Nabihah Taquddin. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-bar" role="status" aria-live="polite"></div>
+
+  <!-- Floating Scroll To Top Button -->
+  <button id="btnScrollTop" class="btn-scroll-top" aria-label="Scroll to top of page">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Mobile Floating Quick Bar (Fixed at bottom on phones) -->
+  <div class="mobile-quick-dock" aria-label="Quick Actions">
+    <a href="Resume%20Nabihah%20Taquddin%20Azmy%20v6%20(Updated).pdf" download class="dock-btn primary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+        <polyline points="7 10 12 15 17 10"></polyline>
+        <line x1="12" y1="15" x2="12" y2="3"></line>
+      </svg>
+      <span>Download Resume</span>
+    </a>
+    <a href="mailto:nabihahtaqudin@gmail.com" class="dock-btn secondary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+        <polyline points="22,6 12,13 2,6"></polyline>
+      </svg>
+      <span>Email</span>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
